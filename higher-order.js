@@ -20,12 +20,11 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
   (element, index, wholeArray)=>{}    Arrow Form
 */
 
-function isEven(value, index, array){
-  if(value % 2 === 0){
-    value.push();
+let evens = mixedNumbers.filter((element, index, wholeArray) => {
+  if(element % 2 === 0){
+    return element;
   }
-}
-let evenNumbers = mixedNumbers.filter(isEven); // = mixedNumbers.filter(/* Provide Your Callback Here */)
+})
 
 
 
@@ -48,7 +47,9 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 //Code Here
-let postTaxPrices // = prices.map(/* Provide Your Callback Here );
+let postTaxPrices = prices.map((element)=>{
+  return element + (element * .07);
+});
 
 
 
